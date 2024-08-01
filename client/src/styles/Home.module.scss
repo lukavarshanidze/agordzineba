@@ -1,0 +1,58 @@
+
+
+
+.data {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 4px solid black;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+
+.data h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-size: 16px;
+    line-height: 1.33;
+    margin-left: 15px;
+    font-weight: 400;
+}
+
+.textContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+.textContainer h3{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.ul .data img {
+    width: 312px !important;
+    height: 312px;
+}
+
+.addPost .textInput{
+    width: 80%;
+    height: 200px;
+}
+
+.addPost  {
+}
+
+.add {
+    width: 50px;
+}
+
+.admin_container {
+}

@@ -1,0 +1,35 @@
+.main__header {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+    color: red;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.navigation ul li{
+    font-size: 24px;
+}
+
+.navigation ul a{
+    color: black;
+}
+
+.navigation .clicked a {
+    color: #9A0101;
+    text-decoration: underline;
+
+  }
+
+.navigation ul li a:hover{
+ color: #9A0101
+}
+
+.clicked {
+    color: red !important;
+}

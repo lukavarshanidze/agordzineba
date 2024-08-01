@@ -1,0 +1,37 @@
+.data {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 4px solid black;
+    padding-bottom: 20px;
+}
+
+.data h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.33;
+    margin-left: 15px;
+    font-weight: 400;
+}
+
+h3.header {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800; 
+}
+
+.ul .data img {
+    width: 412px !important;
+    height: 412px;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
