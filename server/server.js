@@ -13,7 +13,7 @@ const port = 8080;
 
 // Middleware
 app.use(cors({
-    origin: ["https://agordzineba-frontend.vercel.app/"],
+    origin: ["https://agordzineba-frontend.vercel.app"],
     credentials: true
 }));
 app.use(bodyParser.json());
