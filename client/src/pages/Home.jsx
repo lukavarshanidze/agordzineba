@@ -29,7 +29,7 @@ const Home = () => {
         formData.append("image", selectedFile);
 
         const uploadResponse = await axios.post(
-          "http://localhost:8080/api/upload",
+          "https://agordzineba.vercel.app/api/upload",
           formData,
           {
             headers: {
@@ -41,13 +41,13 @@ const Home = () => {
       }
 
       if (addOrEdit === "Add") {
-        await axios.post("http://localhost:8080/api/data", {
+        await axios.post("https://agordzineba.vercel.app/api/data", {
           text: inputData,
           header: headerInputData,
           image: imagePath,
         });
       } else {
-        await axios.patch(`http://localhost:8080/api/data/edit/${addOrEdit}`, {
+        await axios.patch(`https://agordzineba.vercel.app/api/data/edit/${addOrEdit}`, {
           text: inputData,
           header: headerInputData,
         });
@@ -65,7 +65,7 @@ const Home = () => {
   const fetchExactDataPost = async (id) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/getData/${id}`
+        `https://agordzineba.vercel.app/api/getData/${id}`
       );
       setExactDataList(response.data.text);
       setInputData(response.data.text); // Set the text in the textarea
@@ -82,7 +82,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/data");
+      const response = await axios.get("https://agordzineba.vercel.app/api/data");
       setDataList(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -96,7 +96,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/data/${id}`);
+      await axios.delete(`https://agordzineba.vercel.app/api/data/${id}`);
       fetchData();
     } catch (error) {
       console.error("Error deleting data:", error);
@@ -105,7 +105,7 @@ const Home = () => {
 
   const fetchPinnedData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/data/pinned");
+      const response = await axios.get("https://agordzineba.vercel.app/api/data/pinned");
       setDataList(response.data);
     } catch (error) {
       console.error("Error fetching pinned data:", error);
@@ -115,7 +115,7 @@ const Home = () => {
   const handlePin = async (id, pinned) => {
     console.log(id, 'iddd');
     try {
-      await axios.patch(`http://localhost:8080/api/data/${id}/pin`, {
+      await axios.patch(`https://agordzineba.vercel.app/api/data/${id}/pin`, {
         pinned: !pinned,
         id: id,
       });
@@ -169,7 +169,7 @@ const Home = () => {
                 <li className={styles.data} key={data._id}>
                   {data.image && (
                     <img
-                      src={`http://localhost:8080/${data.image.split("/")[1]}`}
+                      src={`https://agordzineba.vercel.app/${data.image.split("/")[1]}`}
                       alt="surati"
                       style={{ width: "100px", marginLeft: "10px" }}
                     />

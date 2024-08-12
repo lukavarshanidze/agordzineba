@@ -13,7 +13,7 @@ const ExactPost = ({}) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/getData/${id}`
+        `https://agordzineba.vercel.app/api/getData/${id}`
       );
       setDataList([response.data]);
     } catch (error) {
@@ -38,7 +38,7 @@ const ExactPost = ({}) => {
               <li className={styles.data} key={data._id}>
                 {data.image && (
                   <img
-                    src={`http://localhost:8080/${data.image.split("/")[1]}`}
+                    src={`https://agordzineba.vercel.app/${data.image.split("/")[1]}`}
                     alt="surati"
                     style={{ width: "100px", marginLeft: "10px" }}
                   />
