@@ -28,6 +28,8 @@ const Home = () => {
         const formData = new FormData();
         formData.append("image", selectedFile);
 
+        console.log("es aris formData",formData)
+
         const uploadResponse = await axios.post(
           "https://agordzineba.vercel.app/api/upload",
           formData,
