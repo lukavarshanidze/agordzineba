@@ -37,7 +37,9 @@ const Home = () => {
             },
           }
         );
+        console.log("es aris uploadResponse", uploadResponse)
         imagePath = uploadResponse.data.filePath;
+        console.log("es aris imagepath",imagePath)
       }
 
       if (addOrEdit === "Add") {
